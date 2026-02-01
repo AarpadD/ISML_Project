@@ -21,11 +21,7 @@ public class Main {
             
             // Create main container
             AgentContainer mainContainer = runtime.createMainContainer(profile);
-            
-            System.out.println("==============================================");
-            System.out.println("  JADE Inventory Management System");
-            System.out.println("==============================================\n");
-            
+
             // Create and start Supplier Agent
             AgentController supplierAgent = mainContainer.createNewAgent(
                 "SupplierAgent", 
@@ -55,12 +51,7 @@ public class Main {
                 null
             );
             buyerAgent.start();
-            
-            System.out.println("\n==============================================");
-            System.out.println("  All agents started successfully!");
-            System.out.println("  Check the JADE GUI for agent interactions");
-            System.out.println("==============================================\n");
-            
+
         } catch (StaleProxyException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
